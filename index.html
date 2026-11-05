@@ -81,7 +81,8 @@ h2{font-weight:300;font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 6px;line-heig
 .step b{display:block;font-weight:600;font-size:1.05rem;margin-top:2px}
 .step span.x{display:block;color:var(--soft);font-size:.92rem;max-width:24ch;margin:4px auto 0;line-height:1.45}
 .close{margin-top:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--cream);border-block:1px solid var(--line)}
-.close .ph{min-height:520px;background:url(i/lens.jpg) center 20%/cover no-repeat}
+.close .ph{min-height:520px;background:#e9dfd2 center 20%/cover no-repeat}
+.close .ph.on{background-image:url(i/lens.jpg)}
 .close .tx{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px max(24px,5vw)}
 .close .tx img{height:74px;width:auto;opacity:.9}
 .close h2{margin-top:22px}
@@ -108,23 +109,23 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
   </div>
   <div class="collage" aria-hidden="true">
     <div class="tall"><video src="v/hero_loop.mp4" poster="p/hero_loop.jpg" autoplay muted loop playsinline preload="auto"></video></div>
-    <div><img src="i/smile.jpg" alt=""></div>
-    <div class="prod"><img src="i/pr_bill.jpg" alt=""></div>
-    <div><img src="i/hoopjaw.jpg" alt=""></div>
-    <div><img src="i/lapis.jpg" alt=""></div>
+    <div><img fetchpriority="high" src="i/smile.jpg" alt=""></div>
+    <div class="prod"><img fetchpriority="high" src="i/pr_bill.jpg" alt=""></div>
+    <div><img fetchpriority="high" src="i/hoopjaw.jpg" alt=""></div>
+    <div><img fetchpriority="high" src="i/lapis.jpg" alt=""></div>
   </div>
 </div></div>
 
 <div class="coll"><div class="in">
   <div class="coll-head"><span>התכשיטים שבסרטונים</span><small>כולם מהאתר שלכם</small></div>
   <div class="strip">
-    <a class="prod-card" href="https://shak-it.co.il/products/gyly-prls-qvvh-mryn" target="_blank" rel="noopener"><img src="i/pr_bill.jpg" alt="עגילי Mermaid Bill"><b>עגילי אקוומרין 5 ב־1 · Mermaid Bill</b><i>322 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/gyly-myny-mrmyyd-mvnstvvn" target="_blank" rel="noopener"><img src="i/pr_minim.jpg" alt="עגילי Mini Mermaid"><b>עגילי מונסטון 4 ב־1 · Mini Mermaid</b><i>225 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-nybh-mvnstvn-4-b-1-dolly" target="_blank" rel="noopener"><img src="i/pr_dolly.jpg" alt="שרשרת Dolly"><b>שרשרת עניבה מונסטון · Dolly</b><i>244 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-lpys-lzvlyy-midi" target="_blank" rel="noopener"><img src="i/pr_lapisp.jpg" alt="שרשרת לאפיס Midi"><b>שרשרת לאפיס לזולי · Midi</b><i>152 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/tsmyd-pnynym-vmvnstvn-levana" target="_blank" rel="noopener"><img src="i/pr_levana.jpg" alt="צמיד Levana"><b>צמיד פנינים ומונסטון · Levana</b><i>210 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-mzl-bny-khn-6-b-1-cosmic" target="_blank" rel="noopener"><img src="i/pr_cosmic.jpg" alt="שרשרת Cosmic"><b>שרשרת מזל ואבני חן · Cosmic</b><i>271 ₪</i></a>
-    <a class="prod-card" href="https://shak-it.co.il/products/%D7%A1%D7%98-%D7%90%D7%91%D7%9F-%D7%97%D7%9F-5-%D7%A6%D7%91%D7%A2%D7%99%D7%9D-%D7%91%D7%A4%D7%A0%D7%99%D7%9D-lin-copy" target="_blank" rel="noopener"><img src="i/pr_chloe.jpg" alt="שרשרת Mermaid Chloe"><b>שרשרת אבני חן · Mermaid Chloe</b><i>196 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/gyly-prls-qvvh-mryn" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_bill.jpg" alt="עגילי Mermaid Bill"><b>עגילי אקוומרין 5 ב־1 · Mermaid Bill</b><i>322 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/gyly-myny-mrmyyd-mvnstvvn" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_minim.jpg" alt="עגילי Mini Mermaid"><b>עגילי מונסטון 4 ב־1 · Mini Mermaid</b><i>225 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-nybh-mvnstvn-4-b-1-dolly" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_dolly.jpg" alt="שרשרת Dolly"><b>שרשרת עניבה מונסטון · Dolly</b><i>244 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-lpys-lzvlyy-midi" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_lapisp.jpg" alt="שרשרת לאפיס Midi"><b>שרשרת לאפיס לזולי · Midi</b><i>152 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/tsmyd-pnynym-vmvnstvn-levana" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_levana.jpg" alt="צמיד Levana"><b>צמיד פנינים ומונסטון · Levana</b><i>210 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-mzl-bny-khn-6-b-1-cosmic" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_cosmic.jpg" alt="שרשרת Cosmic"><b>שרשרת מזל ואבני חן · Cosmic</b><i>271 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/%D7%A1%D7%98-%D7%90%D7%91%D7%9F-%D7%97%D7%9F-5-%D7%A6%D7%91%D7%A2%D7%99%D7%9D-%D7%91%D7%A4%D7%A0%D7%99%D7%9D-lin-copy" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="i/pr_chloe.jpg" alt="שרשרת Mermaid Chloe"><b>שרשרת אבני חן · Mermaid Chloe</b><i>196 ₪</i></a>
   </div>
 </div></div>
 
@@ -133,7 +134,7 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk" id="film"><div class="in">
   <div class="sh"><div class="lbl">הסרט</div><div><h2>איפה שהאור נופל</h2><p>ריל של 30 שניות עם הדוגמנית שלכם, באור של בוקר. פס השמש עובר בחדר, ובכל מקום שהוא נוחת היא עונדת עוד תכשיט.</p></div></div>
   <div class="feature">
-    <figure class="card"><div class="vid arch"><video src="v/light30.mp4" poster="p/light30.jpg" controls playsinline preload="none"></video></div></figure>
+    <figure class="card"><div class="vid arch"><video src="v/light30.mp4" data-poster="p/light30.jpg" controls playsinline preload="none"></video></div></figure>
     <div class="txt">
       <div class="pieces">עגילי מרמייד · שרשרת Dolly · שרשרת לאפיס Midi · צמיד Levana</div>
       <ul class="beats">
@@ -149,11 +150,11 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk"><div class="in">
   <div class="sh"><div class="lbl">הדוגמנית שלכם</div><div><h2>דוגמנית אחת, שלושה לוקים</h2><p>אותה דוגמנית מהקיט שלכם, בשלושה עולמות צילום. כל אחד מתאים לקולקציה אחרת.</p></div></div>
   <div class="grid">
-    <figure class="card"><div class="vid"><video src="v/model_window.mp4" poster="p/model_window.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/model_window.mp4" data-poster="p/model_window.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="m">זהב</div><div class="t">אור חלון חם</div><div class="d">סריג שמנת, ספת בוקלה. עגילי Bill, שרשרת Dolly, צמיד Levana.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/model_flash.mp4" poster="p/model_flash.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/model_flash.mp4" data-poster="p/model_flash.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="m">כסף</div><div class="t">פלאש, כמו בצילומים שלכם</div><div class="d">סאטן שחור וצל על קיר לבן. שרשרת Mermaid Chloe ועגילי מיני מרמייד.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/model_bright.mp4" poster="p/model_bright.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/model_bright.mp4" data-poster="p/model_bright.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="m">זהב</div><div class="t">יום בהיר</div><div class="d">כורסה טורקיז וגופייה לבנה. שרשרת Cosmic: צ׳ארם המזל שלך ו־3 אבני חן.</div></figcaption></figure>
   </div>
 </div></section>
@@ -161,7 +162,7 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk"><div class="in">
   <div class="sh"><div class="lbl">שיר המותג</div><div><h2>Shake it, Shak-it</h2><p>ריל אחד שמחבר את שלוש הקולקציות, עם שיר שנכתב על השם שלכם.</p></div></div>
   <div class="solo">
-    <figure class="card"><div class="vid arch"><video src="v/song.mp4" poster="p/song.jpg" controls playsinline preload="none"></video></div></figure>
+    <figure class="card"><div class="vid arch"><video src="v/song.mp4" data-poster="p/song.jpg" controls playsinline preload="none"></video></div></figure>
     <div class="d">
       <ul class="beats">
         <li>פותח בארבע אבנים שנוחתות בדיוק באותה נקודה במסך.</li>
@@ -176,11 +177,11 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk"><div class="in">
   <div class="sh"><div class="lbl">לפני הקיט</div><div><h2>הדוגמאות הראשונות</h2><p>שלושת הסרטונים שהכנו לפני שקיבלנו את הקיט, עם דוגמניות אחרות. ככה אפשר לבנות גם פנים חדשות לכל קמפיין.</p></div></div>
   <div class="grid">
-    <figure class="card"><div class="vid"><video src="v/first_lv.mp4" poster="p/first_lv.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/first_lv.mp4" data-poster="p/first_lv.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">אינטימי וחם</div><div class="d">עגילי Bill, שרשרת Dolly, טבעת Amy, צמיד Levana.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/first_nova.mp4" poster="p/first_nova.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/first_nova.mp4" data-poster="p/first_nova.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">צחוק ויום בהיר</div><div class="d">שרשרת Mermaid Chloe ועגילי מיני מרמייד.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/first_bill.mp4" poster="p/first_bill.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/first_bill.mp4" data-poster="p/first_bill.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">קלוז אפ על העגיל</div><div class="d">עגילי מרמייד Bill, אקוומרין ופנינים.</div></figcaption></figure>
   </div>
 </div></section>
@@ -188,19 +189,19 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk"><div class="in">
   <div class="sh"><div class="lbl">השראה מאופנה</div><div><h2>עוד שפות צילום</h2><p>כמה סרטונים מעולם האופנה, כדי לראות עוד סגנונות צילום ועריכה שאפשר להביא לשאק איט.</p></div></div>
   <div class="wide-row">
-    <figure class="card"><div class="vid wide"><video src="v/f_ck-wide.mp4" poster="p/f_ck-wide.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid wide"><video src="v/f_ck-wide.mp4" data-poster="p/f_ck-wide.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="m">16:9 · פרסומת לדוגמה</div><div class="t">בוקר בחדר, אור שמש</div><div class="d">האור הזה הוא הבסיס של "איפה שהאור נופל".</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/f_rolex.mp4" poster="p/f_rolex.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/f_rolex.mp4" data-poster="p/f_rolex.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">יוקרה קולנועית</div><div class="d">שעון על יאכטה, שמונה ביטים בחמש עשרה שניות.</div></figcaption></figure>
   </div>
   <div class="grid g4">
-    <figure class="card"><div class="vid"><video src="v/f_alo.mp4" poster="p/f_alo.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/f_alo.mp4" data-poster="p/f_alo.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">לוקבוק נושם</div><div class="d">חצובה קבועה, אור צד אחד, תנועה של נשימה.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/f_fur-paris.mp4" poster="p/f_fur-paris.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/f_fur-paris.mp4" data-poster="p/f_fur-paris.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">חברה מצלמת בפריז</div><div class="d">מצלמה ביד, רחוב אמיתי, לוק אחד.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/f_coats-asmr.mp4" poster="p/f_coats-asmr.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/f_coats-asmr.mp4" data-poster="p/f_coats-asmr.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">כל אבזם נשמע</div><div class="d">ASMR של אופנה: מאקרו, צלילים ואולפן לבן.</div></figcaption></figure>
-    <figure class="card"><div class="vid"><video src="v/f_fan-blade.mp4" poster="p/f_fan-blade.jpg" controls playsinline preload="none"></video></div>
+    <figure class="card"><div class="vid"><video src="v/f_fan-blade.mp4" data-poster="p/f_fan-blade.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">כל להב, לוק חדש</div><div class="d">החלפות לוק מהירות על הקצב.</div></figcaption></figure>
   </div>
 </div></section>
@@ -208,17 +209,17 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 <section class="blk"><div class="in">
   <div class="sh"><div class="lbl">איך זה נבנה</div><div><h2>מהתמונה באתר, לסרט</h2><p>כל סרטון מתחיל בתכשיט אמיתי שלכם ובדוגמנית שלכם, ונגמר בבדיקה של כל תכשיט מול המוצר.</p></div></div>
   <div class="flow">
-    <div class="step"><img src="i/pr_bill.jpg" alt=""><span class="w">המוצר</span><b>תמונת המוצר מהאתר</b><span class="x">אומרים לנו מה לקדם. לא צריך לשלוח כלום.</span></div>
-    <div class="step"><img src="i/kit.jpg" alt=""><span class="w">הדוגמנית</span><b>הפנים מהקיט שלכם</b><span class="x">העיניים, הנמשים והקעקועים שלה נשמרים בכל שוט.</span></div>
-    <div class="step"><img src="i/mirror.jpg" alt=""><span class="w">הצילום</span><b>אור, זוויות ותנועה</b><span class="x">טיוטה לבחירה, הערות, ותיקון עד שזה מדויק.</span></div>
-    <div class="step"><img src="i/hoopjaw.jpg" alt=""><span class="w">הדיוק</span><b>כל תכשיט נבדק</b><span class="x">תכשיט שלא תואם למוצר לא נכנס לסרטון.</span></div>
+    <div class="step"><img loading="lazy" decoding="async" src="i/pr_bill.jpg" alt=""><span class="w">המוצר</span><b>תמונת המוצר מהאתר</b><span class="x">אומרים לנו מה לקדם. לא צריך לשלוח כלום.</span></div>
+    <div class="step"><img loading="lazy" decoding="async" src="i/kit.jpg" alt=""><span class="w">הדוגמנית</span><b>הפנים מהקיט שלכם</b><span class="x">העיניים, הנמשים והקעקועים שלה נשמרים בכל שוט.</span></div>
+    <div class="step"><img loading="lazy" decoding="async" src="i/mirror.jpg" alt=""><span class="w">הצילום</span><b>אור, זוויות ותנועה</b><span class="x">טיוטה לבחירה, הערות, ותיקון עד שזה מדויק.</span></div>
+    <div class="step"><img loading="lazy" decoding="async" src="i/hoopjaw.jpg" alt=""><span class="w">הדיוק</span><b>כל תכשיט נבדק</b><span class="x">תכשיט שלא תואם למוצר לא נכנס לסרטון.</span></div>
   </div>
 </div></section>
 
 <div class="close">
   <div class="ph" role="img" aria-label="הדוגמנית של שאק איט מביטה למצלמה"></div>
   <div class="tx">
-    <img src="c/logo.png" alt="Shak-it">
+    <img loading="lazy" decoding="async" src="c/logo.png" alt="Shak-it">
     <h2>איך ממשיכים</h2>
     <p>בוחרים יחד סגנון, קולקציות וכמות סרטונים בחודש, ובונים לכם הצעה מסודרת.</p>
     <div class="love">בקיצור, תתכונני להתאהב.</div>
@@ -226,5 +227,12 @@ footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86r
 </div>
 
 <footer><div class="in">אוראל לוי | יצירת תוכן והפקות AI</div></footer>
+<script>
+(function(){var els=[].slice.call(document.querySelectorAll('video[data-poster],.close .ph'));
+function show(e){if(e.dataset.poster){e.poster=e.dataset.poster;e.removeAttribute('data-poster')}else{e.classList.add('on')}}
+if(!('IntersectionObserver' in window)){els.forEach(show);return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target)}})},{rootMargin:'700px 0px'});
+els.forEach(function(e){io.observe(e)})})();
+</script>
 </body>
 </html>
