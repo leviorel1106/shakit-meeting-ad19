@@ -7,126 +7,174 @@
 <title>שאק איט בתנועה</title>
 <meta name="description" content="סרטונים מהתכשיטים של שאק איט עם הדוגמנית שלכם · אוראל לוי">
 <link rel="icon" href="c/logo.png">
-</head>
-<body>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;600;700&display=swap">
 <style>
-/* layout: one light editorial column in Shak-it's own brand (site palette #fafafa / #111 / gold #ab8c52 / nude #caa58f, font Assistant, script logo); vertical reels in a wrapping grid */
-:root{--bg:#fafafa;--paper:#ffffff;--ink:#111111;--soft:#5e5e5e;--line:#e6ddcb;--gold:#ab8c52;--nude:#caa58f;--band:#efe6da;
+/* Shak-it's own brand: site palette #fafafa / #111 / gold #ab8c52 / nude #caa58f / line #e6ddcb, font Assistant, script logo.
+   Boutique feel: arched frames (like a jewellery-shop window), gold hairlines, editorial collage, no boxed cards. */
+:root{--bg:#fafafa;--paper:#ffffff;--ink:#111111;--soft:#5e5e5e;--mute:#8b847b;--line:#e6ddcb;--gold:#ab8c52;--nude:#caa58f;--cream:#f3ece2;
 --f:"Assistant",system-ui,sans-serif;color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);direction:rtl;font-size:17px;line-height:1.6}
-.in{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-header.bar{background:var(--paper);border-bottom:1px solid var(--line)}
-header.bar .in{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:16px}
-header.bar img{height:44px;width:auto}
-header.bar .orel{font-weight:300;letter-spacing:.32em;font-size:.78rem;color:var(--soft);white-space:nowrap}
-.hero{padding-block:56px 40px;text-align:center}
-.kick{color:var(--gold);font-weight:600;letter-spacing:.18em;font-size:.8rem}
-h1{font-weight:200;font-size:clamp(2.3rem,6vw,3.8rem);line-height:1.05;margin:.3em 0 .25em;text-wrap:balance;letter-spacing:-.01em}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.6}
+img,video{max-width:100%;display:block}
+.in{max-width:1120px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header.bar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+header.bar .in{display:flex;align-items:center;justify-content:space-between;padding-block:12px}
+header.bar img{height:40px;width:auto}
+header.bar .orel{font-weight:300;letter-spacing:.34em;font-size:.74rem;color:var(--soft)}
+.hero{padding-block:44px 28px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.kick{color:var(--gold);font-weight:600;letter-spacing:.2em;font-size:.78rem}
+h1{font-weight:200;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;margin:.25em 0 .3em;letter-spacing:-.015em}
 h1 b{font-weight:600}
-.lead{max-width:60ch;margin:0 auto;color:var(--soft);font-size:1.08rem}
-.band{background:var(--band);border-block:1px solid var(--line)}
-.band .in{padding-block:30px;text-align:center}
-.band p{margin:0;font-size:clamp(1.25rem,3.2vw,1.7rem);font-weight:300;text-wrap:balance}
-.band p b{font-weight:600;color:var(--gold)}
-section{padding-block:52px 8px}
-.sh{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
-.num{color:var(--gold);font-weight:600;letter-spacing:.2em;font-size:.78rem}
-h2{font-weight:300;font-size:clamp(1.6rem,3.6vw,2.2rem);margin:0;line-height:1.15;text-wrap:balance}
-.sh p{margin:0;color:var(--soft);max-width:62ch}
-.feature{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:32px;align-items:center}
+.lead{color:var(--soft);font-size:1.08rem;max-width:44ch;margin:0}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;color:var(--ink);text-decoration:none;font-weight:600;border-bottom:1px solid var(--gold);padding-bottom:4px}
+.btn:hover{color:var(--gold)}
+.collage{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:min(600px,70vh);min-height:430px}
+.collage>*{border-radius:6px;overflow:hidden;background:var(--cream);min-width:0;min-height:0}
+.collage .tall{grid-row:span 2;border-radius:999px 999px 8px 8px}
+.collage img,.collage video{width:100%;height:100%;object-fit:cover}
+.collage .prod{background:#fff}
+.coll{padding-block:26px 8px}
+.coll-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px;border-top:1px solid var(--line);padding-top:18px}
+.coll-head span{font-size:.82rem;letter-spacing:.18em;color:var(--gold);font-weight:600}
+.coll-head small{color:var(--mute);font-size:.86rem}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.prod-card{scroll-snap-align:start;text-decoration:none;color:inherit;min-width:0}
+.prod-card img{aspect-ratio:1;object-fit:cover;width:100%;border-radius:999px 999px 6px 6px;background:#fff}
+.prod-card b{display:block;font-weight:600;font-size:.92rem;margin-top:8px;line-height:1.3}
+.prod-card i{font-style:normal;color:var(--mute);font-size:.84rem}
+.state{padding-block:56px}
+.state p{margin:0 auto;max-width:30ch;text-align:center;font-weight:200;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.25}
+.state p b{font-weight:600;color:var(--gold)}
+section.blk{padding-block:40px 12px}
+.sh{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:24px;border-top:1px solid var(--line);padding-top:22px}
+.lbl{color:var(--gold);font-weight:600;letter-spacing:.2em;font-size:.78rem;padding-top:8px}
+h2{font-weight:300;font-size:clamp(1.7rem,3.4vw,2.4rem);margin:0 0 6px;line-height:1.12}
+.sh p{margin:0;color:var(--soft);max-width:60ch}
+.feature{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:40px;align-items:center}
 .feature .txt{min-width:0}
-.feature ol{margin:14px 0 0;padding-inline-start:20px;color:var(--soft);display:grid;gap:4px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pieces{color:var(--gold);font-size:.86rem;letter-spacing:.04em}
+.beats{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.beats li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;color:var(--soft)}
+.beats li::before{content:"";width:28px;height:1px;background:var(--gold);margin-top:.85em}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .card{margin:0;min-width:0}
-.vid{position:relative;border-radius:14px;overflow:hidden;background:#e9e4dc;aspect-ratio:9/16;box-shadow:0 1px 0 var(--line)}
+.vid{position:relative;border-radius:8px;overflow:hidden;background:var(--cream);aspect-ratio:9/16}
+.vid.arch{border-radius:999px 999px 8px 8px}
 .vid.wide{aspect-ratio:16/9}
-.vid video{width:100%;height:100%;object-fit:cover;display:block}
-.card figcaption{padding:10px 2px 0}
-.card .t{font-weight:600;font-size:1rem}
+.vid video{width:100%;height:100%;object-fit:cover}
+.card figcaption{padding:12px 2px 0}
+.card .m{color:var(--gold);font-size:.78rem;letter-spacing:.14em;font-weight:600}
+.card .t{font-weight:600;font-size:1.02rem;margin-top:2px}
 .card .d{color:var(--soft);font-size:.92rem;line-height:1.45}
-.tag{display:inline-block;font-size:.72rem;letter-spacing:.08em;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:1px 10px;margin-bottom:4px;background:var(--paper)}
-.wide-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px;margin-bottom:20px}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s;margin:0;padding:0;list-style:none}
-.steps li{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;counter-increment:s;min-width:0}
-.steps li::before{content:counter(s);display:block;font-weight:200;font-size:2.2rem;color:var(--gold);line-height:1}
-.steps b{display:block;margin:8px 0 4px;font-weight:600}
-.steps span{color:var(--soft);font-size:.94rem}
-.cta{padding-block:56px;text-align:center}
-.cta h2{margin-bottom:10px}
-.love{font-weight:300;font-size:1.25rem;color:var(--gold);margin-top:14px}
-footer{border-top:1px solid var(--line);background:var(--paper)}
-footer .in{padding-block:22px;text-align:center;color:var(--soft);font-size:.9rem;letter-spacing:.04em}
-@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.wide-row{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:640px){.feature{grid-template-columns:minmax(0,1fr)}.feature .vid{max-width:380px;margin:0 auto}}
-@media (max-width:460px){.grid{gap:12px}.card .d{font-size:.86rem}.steps{grid-template-columns:minmax(0,1fr)}header.bar img{height:36px}}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
-
-.hero{text-align:right;padding-block:48px 44px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
-.hero-txt{min-width:0}
-.hero .lead{margin:0}
-.btn{display:inline-block;margin-top:24px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:12px 28px;border-radius:999px;letter-spacing:.02em}
-.btn:hover{background:var(--gold)}
-.hero-vid{justify-self:center;width:min(340px,100%);aspect-ratio:9/16;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(80,60,30,.45),0 0 0 1px var(--line)}
-.hero-vid video{width:100%;height:100%;object-fit:cover;display:block}
-header.bar{position:sticky;top:0;z-index:5;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.9)}
-@media (max-width:760px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:28px;text-align:center}.hero{text-align:center}.hero .lead{margin:0 auto}.hero-vid{width:min(300px,82%)}}
+.solo{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:40px;align-items:center}
+.solo .d{color:var(--soft)}
+.wide-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:22px;margin-bottom:22px}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;position:relative;margin-top:6px}
+.flow::before{content:"";position:absolute;top:31%;right:6%;left:6%;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 12%,var(--gold) 88%,transparent);z-index:0}
+.step{position:relative;z-index:1;text-align:center;min-width:0}
+.step img{width:min(200px,100%);aspect-ratio:3/4;object-fit:cover;margin:0 auto;border-radius:999px 999px 8px 8px;box-shadow:0 0 0 6px var(--bg),0 0 0 7px var(--line)}
+.step .w{display:block;margin-top:16px;color:var(--gold);font-weight:600;letter-spacing:.2em;font-size:.76rem}
+.step b{display:block;font-weight:600;font-size:1.05rem;margin-top:2px}
+.step span.x{display:block;color:var(--soft);font-size:.92rem;max-width:24ch;margin:4px auto 0;line-height:1.45}
+.close{margin-top:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--cream);border-block:1px solid var(--line)}
+.close .ph{min-height:520px;background:url(i/lens.jpg) center 20%/cover no-repeat}
+.close .tx{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px max(24px,5vw)}
+.close .tx img{height:74px;width:auto;opacity:.9}
+.close h2{margin-top:22px}
+.close p{color:var(--soft);max-width:36ch;margin:6px 0 0}
+.close .love{margin-top:22px;font-weight:300;font-size:1.35rem;color:var(--gold)}
+footer .in{padding-block:22px;text-align:center;color:var(--mute);font-size:.86rem;letter-spacing:.06em}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:30px}.hero-txt{text-align:center}.lead{margin:0 auto}.collage{height:520px}
+ .grid,.grid.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.sh{grid-template-columns:minmax(0,1fr);gap:6px}.feature,.solo{grid-template-columns:minmax(0,1fr)}.feature .card,.solo .card{max-width:360px;margin:0 auto;width:100%}
+ .wide-row{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}.flow::before{display:none}.close{grid-template-columns:minmax(0,1fr)}.close .ph{min-height:420px}}
+@media (max-width:520px){.collage{height:440px;min-height:0;gap:7px}.grid{gap:12px}.card .d{font-size:.86rem}h1{font-size:2.6rem}header.bar img{height:34px}.strip{grid-auto-columns:46%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+</head>
+<body>
 
 <header class="bar"><div class="in"><img src="c/logo.png" alt="Shak-it"><span class="orel">× OREL LEVI</span></div></header>
 
 <div class="hero"><div class="in hero-grid">
   <div class="hero-txt">
     <div class="kick">לקראת הפגישה</div>
-    <h1>שאק איט, <b>בתנועה</b></h1>
+    <h1>שאק איט,<br><b>בתנועה</b></h1>
     <p class="lead">הכנו לכם סרטונים מהתכשיטים האמיתיים שבאתר שלכם, עם הדוגמנית שלכם, בכמה סגנונות. ככה זה יכול להיראות אצלכם בפיד, בכל קולקציה.</p>
-    <a class="btn" href="#s01">לצפייה בסרטונים</a>
+    <a class="btn" href="#film">לצפייה בסרטונים <span aria-hidden="true">←</span></a>
   </div>
-  <div class="hero-vid"><video src="v/hero_loop.mp4" poster="p/hero_loop.jpg" autoplay muted loop playsinline preload="auto" aria-label="איפה שהאור נופל"></video></div>
+  <div class="collage" aria-hidden="true">
+    <div class="tall"><video src="v/hero_loop.mp4" poster="p/hero_loop.jpg" autoplay muted loop playsinline preload="auto"></video></div>
+    <div><img src="i/smile.jpg" alt=""></div>
+    <div class="prod"><img src="i/pr_bill.jpg" alt=""></div>
+    <div><img src="i/hoopjaw.jpg" alt=""></div>
+    <div><img src="i/lapis.jpg" alt=""></div>
+  </div>
 </div></div>
-<div class="band"><div class="in"><p>כל תכשיט שתראו כאן הוא <b>תכשיט אמיתי מהקולקציות שלכם</b>, בלי יום צילום.</p></div></div>
 
-<section id="s01"><div class="in">
-  <div class="sh"><span class="num">01</span><h2>איפה שהאור נופל</h2><p>ריל של 30 שניות עם הדוגמנית שלכם, באור של בוקר. פס השמש עובר בחדר, ובכל מקום שהוא נוחת היא עונדת עוד תכשיט.</p></div>
+<div class="coll"><div class="in">
+  <div class="coll-head"><span>התכשיטים שבסרטונים</span><small>כולם מהאתר שלכם</small></div>
+  <div class="strip">
+    <a class="prod-card" href="https://shak-it.co.il/products/gyly-prls-qvvh-mryn" target="_blank" rel="noopener"><img src="i/pr_bill.jpg" alt="עגילי Mermaid Bill"><b>עגילי אקוומרין 5 ב־1 · Mermaid Bill</b><i>322 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/gyly-myny-mrmyyd-mvnstvvn" target="_blank" rel="noopener"><img src="i/pr_minim.jpg" alt="עגילי Mini Mermaid"><b>עגילי מונסטון 4 ב־1 · Mini Mermaid</b><i>225 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-nybh-mvnstvn-4-b-1-dolly" target="_blank" rel="noopener"><img src="i/pr_dolly.jpg" alt="שרשרת Dolly"><b>שרשרת עניבה מונסטון · Dolly</b><i>244 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-lpys-lzvlyy-midi" target="_blank" rel="noopener"><img src="i/pr_lapisp.jpg" alt="שרשרת לאפיס Midi"><b>שרשרת לאפיס לזולי · Midi</b><i>152 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/tsmyd-pnynym-vmvnstvn-levana" target="_blank" rel="noopener"><img src="i/pr_levana.jpg" alt="צמיד Levana"><b>צמיד פנינים ומונסטון · Levana</b><i>210 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/shrshrt-mzl-bny-khn-6-b-1-cosmic" target="_blank" rel="noopener"><img src="i/pr_cosmic.jpg" alt="שרשרת Cosmic"><b>שרשרת מזל ואבני חן · Cosmic</b><i>271 ₪</i></a>
+    <a class="prod-card" href="https://shak-it.co.il/products/%D7%A1%D7%98-%D7%90%D7%91%D7%9F-%D7%97%D7%9F-5-%D7%A6%D7%91%D7%A2%D7%99%D7%9D-%D7%91%D7%A4%D7%A0%D7%99%D7%9D-lin-copy" target="_blank" rel="noopener"><img src="i/pr_chloe.jpg" alt="שרשרת Mermaid Chloe"><b>שרשרת אבני חן · Mermaid Chloe</b><i>196 ₪</i></a>
+  </div>
+</div></div>
+
+<div class="state"><div class="in"><p>כל תכשיט שתראו כאן הוא <b>תכשיט אמיתי מהקולקציות שלכם</b>, בלי יום צילום.</p></div></div>
+
+<section class="blk" id="film"><div class="in">
+  <div class="sh"><div class="lbl">הסרט</div><div><h2>איפה שהאור נופל</h2><p>ריל של 30 שניות עם הדוגמנית שלכם, באור של בוקר. פס השמש עובר בחדר, ובכל מקום שהוא נוחת היא עונדת עוד תכשיט.</p></div></div>
   <div class="feature">
-    <figure class="card"><div class="vid"><video src="v/light30.mp4" poster="p/light30.jpg" controls playsinline preload="none"></video></div></figure>
+    <figure class="card"><div class="vid arch"><video src="v/light30.mp4" poster="p/light30.jpg" controls playsinline preload="none"></video></div></figure>
     <div class="txt">
-      <span class="tag">עגילי מרמייד · שרשרת Dolly · שרשרת לאפיס Midi · צמיד Levana</span>
-      <ol>
+      <div class="pieces">עגילי מרמייד · שרשרת Dolly · שרשרת לאפיס Midi · צמיד Levana</div>
+      <ul class="beats">
         <li>היא בוחרת צ׳ארמים מהקערית, מתלבטת מול המראה בין אקוומרין לפנינה, ובוחרת את שניהם.</li>
         <li>עונדת את העגיל מול המראה: זוג עגילים אחד, 5 לוקים שונים.</li>
         <li>שרשראות בחלון, לאפיס בפס של שמש, צמיד שעובר דרך האור.</li>
         <li>מבט אחד לעדשה בסוף. בקיצור, תתכונני להתאהב.</li>
-      </ol>
+      </ul>
     </div>
   </div>
 </div></section>
 
-<section><div class="in">
-  <div class="sh"><span class="num">02</span><h2>דוגמנית אחת, שלושה לוקים</h2><p>אותה דוגמנית מהקיט שלכם, בשלושה עולמות צילום שונים. כל אחד מתאים לקולקציה אחרת.</p></div>
+<section class="blk"><div class="in">
+  <div class="sh"><div class="lbl">הדוגמנית שלכם</div><div><h2>דוגמנית אחת, שלושה לוקים</h2><p>אותה דוגמנית מהקיט שלכם, בשלושה עולמות צילום. כל אחד מתאים לקולקציה אחרת.</p></div></div>
   <div class="grid">
     <figure class="card"><div class="vid"><video src="v/model_window.mp4" poster="p/model_window.jpg" controls playsinline preload="none"></video></div>
-      <figcaption><span class="tag">זהב</span><div class="t">אור חלון חם</div><div class="d">סריג שמנת, ספת בוקלה. עגילי Bill, שרשרת Dolly, צמיד Levana.</div></figcaption></figure>
+      <figcaption><div class="m">זהב</div><div class="t">אור חלון חם</div><div class="d">סריג שמנת, ספת בוקלה. עגילי Bill, שרשרת Dolly, צמיד Levana.</div></figcaption></figure>
     <figure class="card"><div class="vid"><video src="v/model_flash.mp4" poster="p/model_flash.jpg" controls playsinline preload="none"></video></div>
-      <figcaption><span class="tag">כסף</span><div class="t">פלאש, כמו בצילומים שלכם</div><div class="d">סאטן שחור וצל על קיר לבן. שרשרת Mermaid Chloe ועגילי מיני מרמייד.</div></figcaption></figure>
+      <figcaption><div class="m">כסף</div><div class="t">פלאש, כמו בצילומים שלכם</div><div class="d">סאטן שחור וצל על קיר לבן. שרשרת Mermaid Chloe ועגילי מיני מרמייד.</div></figcaption></figure>
     <figure class="card"><div class="vid"><video src="v/model_bright.mp4" poster="p/model_bright.jpg" controls playsinline preload="none"></video></div>
-      <figcaption><span class="tag">זהב</span><div class="t">יום בהיר</div><div class="d">כורסה טורקיז וגופייה לבנה. שרשרת Cosmic: צ׳ארם המזל שלך ו־3 אבני חן.</div></figcaption></figure>
+      <figcaption><div class="m">זהב</div><div class="t">יום בהיר</div><div class="d">כורסה טורקיז וגופייה לבנה. שרשרת Cosmic: צ׳ארם המזל שלך ו־3 אבני חן.</div></figcaption></figure>
   </div>
 </div></section>
 
-<section><div class="in">
-  <div class="sh"><span class="num">03</span><h2>Shake it, Shak-it</h2><p>ריל אחד שמחבר את שלוש הקולקציות, עם שיר שנכתב על השם שלכם. החיתוכים, הפלאשים והמעברים יושבים על הביט ועל המילים.</p></div>
-  <div class="grid">
-    <figure class="card"><div class="vid"><video src="v/song.mp4" poster="p/song.jpg" controls playsinline preload="none"></video></div>
-      <figcaption><span class="tag">שיר מקורי</span><div class="t">ריל המותג</div><div class="d">פתיחה של ארבע אבנים שנוחתות באותה נקודה במסך, וכל קולקציה נפתחת באותה תנועה.</div></figcaption></figure>
+<section class="blk"><div class="in">
+  <div class="sh"><div class="lbl">שיר המותג</div><div><h2>Shake it, Shak-it</h2><p>ריל אחד שמחבר את שלוש הקולקציות, עם שיר שנכתב על השם שלכם.</p></div></div>
+  <div class="solo">
+    <figure class="card"><div class="vid arch"><video src="v/song.mp4" poster="p/song.jpg" controls playsinline preload="none"></video></div></figure>
+    <div class="d">
+      <ul class="beats">
+        <li>פותח בארבע אבנים שנוחתות בדיוק באותה נקודה במסך.</li>
+        <li>כל קולקציה נפתחת באותה תנועה: היא מסתובבת לפרופיל.</li>
+        <li>קולקציית הכסף בשחור־לבן, והצבע חוזר בבת אחת בדרופ.</li>
+        <li>החיתוכים והפלאשים יושבים על כל "Shake it" בשיר.</li>
+      </ul>
+    </div>
   </div>
 </div></section>
 
-<section><div class="in">
-  <div class="sh"><span class="num">04</span><h2>הדוגמאות הראשונות</h2><p>שלושת הסרטונים שהכנו עוד לפני שקיבלנו את הקיט, עם דוגמניות אחרות. ככה אפשר לבנות גם פנים חדשות לכל קמפיין.</p></div>
+<section class="blk"><div class="in">
+  <div class="sh"><div class="lbl">לפני הקיט</div><div><h2>הדוגמאות הראשונות</h2><p>שלושת הסרטונים שהכנו לפני שקיבלנו את הקיט, עם דוגמניות אחרות. ככה אפשר לבנות גם פנים חדשות לכל קמפיין.</p></div></div>
   <div class="grid">
     <figure class="card"><div class="vid"><video src="v/first_lv.mp4" poster="p/first_lv.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">אינטימי וחם</div><div class="d">עגילי Bill, שרשרת Dolly, טבעת Amy, צמיד Levana.</div></figcaption></figure>
@@ -137,15 +185,15 @@ header.bar{position:sticky;top:0;z-index:5;backdrop-filter:saturate(1.2) blur(8p
   </div>
 </div></section>
 
-<section><div class="in">
-  <div class="sh"><span class="num">05</span><h2>עוד סגנונות שעשינו לאופנה</h2><p>כמה סרטונים מעולם האופנה, כדי לראות עוד שפות צילום ועריכה שאפשר להביא לשאק איט.</p></div>
+<section class="blk"><div class="in">
+  <div class="sh"><div class="lbl">השראה מאופנה</div><div><h2>עוד שפות צילום</h2><p>כמה סרטונים מעולם האופנה, כדי לראות עוד סגנונות צילום ועריכה שאפשר להביא לשאק איט.</p></div></div>
   <div class="wide-row">
     <figure class="card"><div class="vid wide"><video src="v/f_ck-wide.mp4" poster="p/f_ck-wide.jpg" controls playsinline preload="none"></video></div>
-      <figcaption><span class="tag">16:9 · פרסומת לדוגמה</span><div class="t">בוקר בחדר, אור שמש</div><div class="d">סרט רוחבי באור בוקר קשה. האור הזה הוא הבסיס של "איפה שהאור נופל".</div></figcaption></figure>
+      <figcaption><div class="m">16:9 · פרסומת לדוגמה</div><div class="t">בוקר בחדר, אור שמש</div><div class="d">האור הזה הוא הבסיס של "איפה שהאור נופל".</div></figcaption></figure>
     <figure class="card"><div class="vid"><video src="v/f_rolex.mp4" poster="p/f_rolex.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">יוקרה קולנועית</div><div class="d">שעון על יאכטה, שמונה ביטים בחמש עשרה שניות.</div></figcaption></figure>
   </div>
-  <div class="grid">
+  <div class="grid g4">
     <figure class="card"><div class="vid"><video src="v/f_alo.mp4" poster="p/f_alo.jpg" controls playsinline preload="none"></video></div>
       <figcaption><div class="t">לוקבוק נושם</div><div class="d">חצובה קבועה, אור צד אחד, תנועה של נשימה.</div></figcaption></figure>
     <figure class="card"><div class="vid"><video src="v/f_fur-paris.mp4" poster="p/f_fur-paris.jpg" controls playsinline preload="none"></video></div>
@@ -157,23 +205,26 @@ header.bar{position:sticky;top:0;z-index:5;backdrop-filter:saturate(1.2) blur(8p
   </div>
 </div></section>
 
-<section><div class="in">
-  <div class="sh"><span class="num">06</span><h2>איך זה עובד</h2></div>
-  <ol class="steps">
-    <li><b>בוחרים תכשיטים</b><span>ישר מהאתר שלכם. לא צריך לשלוח כלום, רק להגיד מה לקדם.</span></li>
-    <li><b>הדוגמנית שלכם</b><span>מהקיט שכבר יש לכם, עם הפנים, הנמשים והקעקועים שלה. או דוגמנית חדשה לקמפיין.</span></li>
-    <li><b>סגנון ותנועה</b><span>אור, זוויות, קלוז אפים ומוזיקה. מקבלים טיוטה, מעירים, ומתקנים.</span></li>
-    <li><b>דיוק בכל תכשיט</b><span>כל שוט נבדק מול תמונת המוצר. תכשיט לא מדויק לא נכנס לסרטון. ריל מוכן לפרסום.</span></li>
-  </ol>
+<section class="blk"><div class="in">
+  <div class="sh"><div class="lbl">איך זה נבנה</div><div><h2>מהתמונה באתר, לסרט</h2><p>כל סרטון מתחיל בתכשיט אמיתי שלכם ובדוגמנית שלכם, ונגמר בבדיקה של כל תכשיט מול המוצר.</p></div></div>
+  <div class="flow">
+    <div class="step"><img src="i/pr_bill.jpg" alt=""><span class="w">המוצר</span><b>תמונת המוצר מהאתר</b><span class="x">אומרים לנו מה לקדם. לא צריך לשלוח כלום.</span></div>
+    <div class="step"><img src="i/kit.jpg" alt=""><span class="w">הדוגמנית</span><b>הפנים מהקיט שלכם</b><span class="x">העיניים, הנמשים והקעקועים שלה נשמרים בכל שוט.</span></div>
+    <div class="step"><img src="i/mirror.jpg" alt=""><span class="w">הצילום</span><b>אור, זוויות ותנועה</b><span class="x">טיוטה לבחירה, הערות, ותיקון עד שזה מדויק.</span></div>
+    <div class="step"><img src="i/hoopjaw.jpg" alt=""><span class="w">הדיוק</span><b>כל תכשיט נבדק</b><span class="x">תכשיט שלא תואם למוצר לא נכנס לסרטון.</span></div>
+  </div>
 </div></section>
 
-<div class="cta"><div class="in">
-  <h2>איך ממשיכים</h2>
-  <p class="lead">בוחרים יחד סגנון, קולקציות וכמות סרטונים בחודש, ובונים לכם הצעה מסודרת.</p>
-  <div class="love">בקיצור, תתכונני להתאהב.</div>
-</div></div>
+<div class="close">
+  <div class="ph" role="img" aria-label="הדוגמנית של שאק איט מביטה למצלמה"></div>
+  <div class="tx">
+    <img src="c/logo.png" alt="Shak-it">
+    <h2>איך ממשיכים</h2>
+    <p>בוחרים יחד סגנון, קולקציות וכמות סרטונים בחודש, ובונים לכם הצעה מסודרת.</p>
+    <div class="love">בקיצור, תתכונני להתאהב.</div>
+  </div>
+</div>
 
 <footer><div class="in">אוראל לוי | יצירת תוכן והפקות AI</div></footer>
-
 </body>
 </html>
